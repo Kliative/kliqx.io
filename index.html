@@ -7,6 +7,17 @@
   <title>kliqx</title>
 </head>
 <style>
+  /*  fonts */
+  @font-face {
+    font-family: BEYNO;
+    src: url(BEYNO.otf);
+  }
+
+  @font-face {
+    font-family: wakandaforever;
+    src: url(wakandaforever.otf);
+  }
+
   body {
     display: flex;
     width: 100vw;
@@ -20,17 +31,6 @@
     letter-spacing: -7px;
   }
 
-  /*  fonts */
-  @font-face {
-    font-family: BEYNO;
-    src: url(BEYNO.otf);
-  }
-
-  @font-face {
-    font-family: wakandaforever;
-    src: url(wakandaforever.otf);
-  }
-
   .wakandaforever {
     font-family: wakandaforever;
   }
@@ -40,7 +40,7 @@
   }
 
 
-  div {
+  .title {
     animation: glitch 1s linear infinite;
   }
 
@@ -61,14 +61,14 @@
     }
   }
 
-  div:before,
-  div:after {
+  .title:before,
+  .title:after {
     content: attr(title);
     position: absolute;
     left: 0;
   }
 
-  div:before {
+  .title:before {
     animation: glitchTop 1s linear infinite;
     clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
@@ -91,7 +91,7 @@
     }
   }
 
-  div:after {
+  .title:after {
     animation: glitchBotom 1.5s linear infinite;
     clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
@@ -113,22 +113,20 @@
       transform: translate(-22px, 5px) skew(21deg);
     }
   }
+
+  .slogan {
+    position: absolute;
+    font-size: 12px;
+    margin-top: 2em;
+    bottom: 2em;
+    letter-spacing: .8vw;
+  }
 </style>
 
 <body>
-
-  <!-- <div title="404">404</div> -->
-  <!-- <div class="benyo" title="kliqx.io">kliqx.io</div> -->
-  <div class="wakandaforever" title="kliqx.io">kliqx.io</div>
-  <!-- <div class="kliqx-center">
-        <span class="benyo">
-            kliqx.io
-        </span>
-        <span class="wakandaforever">
-            kliq.io
-        </span>
-
-    </div> -->
+  <div class="title wakandaforever" title="kliqx.io">kliqx.io</div>
+  <br>
+  <div class="slogan benyo">creators</div>
 </body>
 
 </html>
